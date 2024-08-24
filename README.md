@@ -14,3 +14,4 @@ Upon resubmission I will be able to finish the project in its entirety.
 
 ![GitPod Usage Limit](static/images/gitpod-error-1.png)
 
+![GitPod Usage Limit](static/images/gitpod-error-2.png)

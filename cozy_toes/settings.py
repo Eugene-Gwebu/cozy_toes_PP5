@@ -10,8 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,9 +27,9 @@ SECRET_KEY = 'django-insecure-n2yr)oxr-4!lmwu*q6^h=r8+##$_+8+0+wanbkz^0ty=mmg74y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-eugenegwebu-cozytoespp5-hzm9xgtxzvy.ws-eu115.gitpod.io']
+ALLOWED_HOSTS = ['8000-eugenegwebu-cozytoespp5-iphxwacfy8a.ws-eu117.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-eugenegwebu-cozytoespp5-hzm9xgtxzvy.ws-eu115.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-eugenegwebu-cozytoespp5-iphxwacfy8a.ws-eu116.gitpod.io']
 
 
 # Application definition
@@ -97,7 +98,7 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
-LOGIN_URL = '/accounts/login/'
+LOGIN_URL = '/accounts/login/' 
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'cozy_toes.wsgi.application'

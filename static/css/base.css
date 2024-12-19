@@ -1,0 +1,148 @@
+/* General Styles */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-x: hidden; /* Prevent scrolling */
+}
+
+
+/* Header Section */
+
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+}
+
+.header-top-bar .logo {
+  max-width: 100px;
+  max-height: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* Center the Logo */
+
+.logo {
+  max-width: 115px;
+  max-height: 115px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* User Options */
+
+.user-options {
+  text-align: center;
+}
+
+.user-options .nav-link {
+  font-size: 0.85rem;
+  color: #000;
+}
+
+
+/* Center Navigation Bar */
+
+.navigation-bar .navbar {
+  justify-content: center;
+  padding: 0;
+}
+
+.navigation-bar .navbar-nav {
+  text-align: center;
+}
+
+.navigation-bar .nav-link {
+  font-size: 14px;
+  padding: 0 15px;
+}
+
+.navigation-bar .nav-link:hover {
+  color: #0074D9;
+  text-decoration: underline;
+}
+
+.dropdown-menu {
+  left: 50%;
+  transform: translateX(-50%);
+  right: auto;
+  text-align: center;
+}
+
+/* Search Form */
+
+.input-group .form-control {
+  border-color: #000;
+}
+
+.input-group-append .btn {
+  background-color: #000;
+  color: #fff;
+}
+
+  
+  /* Hero Section */
+
+  .hero-height {
+    height: 100vh;
+  }
+  
+  .hero-section {
+    background: linear-gradient(180deg, #0074D9 15%, #003D73 69%);
+  }
+
+  .hero-section .container-fluid {
+    width: 100vw; /* Ensure full viewport width */
+    height: 100vh; /* Ensure full viewport height */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .hero-heading {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-button {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+  
+  .hero-image {
+    max-height: 120%;
+    max-width: 120%;
+  }
+  
+
+@media (max-width: 768px) {
+
+  .logo {
+    margin: 10px auto;
+  }
+
+  .user-options {
+    margin-top: 10px;
+  }
+
+  .navigation-bar .nav-link {
+    font-size: 12px;
+  }
+
+  .navbar .container {
+    padding-right: 0;
+    padding-left: 0;
+    justify-content: center;
+  }
+  
+}

@@ -2,26 +2,59 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
+    <!-- <div class="container header-container">
         <div class="row">
             <div class="col"></div>
         </div>
-    </div>
+    </div> -->
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    Quality socks for all occasions!
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="" class="browse-shop-button btn btn-lg rounded-0 text-uppercase py-3">Browse Shop</a>
-                    </h4>
+    
+    <!-- Hero Section -->
+    <div class="hero-section container-fluid">
+        <!-- Image Section -->
+        <div class="row hero-height">
+            <!-- Left Section -->
+            <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-center text-center text-lg-left px-4">
+            <div>
+                <!-- Main Heading -->
+                <div class="hero-heading text-warning font-weight-bold">
+                <h1>Quality Socks <br> For All Occasions</h1>
                 </div>
+
+                <!-- Subtitle -->
+                <p class="hero-subtitle mt-4 text-secondary">
+                Phasellus risus turpis, pretium sit amet magna non, molestie ultricies enim. <br>
+                Nullam pulvinar felis at metus.
+                </p>
+
+                <!-- Button -->
+                <a href="#" class="btn btn-warning text-white font-weight-bold hero-button mt-3">
+                View All Items
+                </a>
+            </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center">
+            <img src="/static/images/hero-socks.png" class="img-fluid hero-image" alt="Photo">
             </div>
         </div>
     </div>
+    <!-- <div class="row h-100">
+        <div class="col-7 col-md-6 my-auto">
+            <h1 class="display-4 logo-font text-black">
+                Quality socks for all occasions!
+            </h1>
+            <div class="my-5">
+                <h4>
+                    <a href="" class="browse-shop-button btn btn-lg rounded-0 text-uppercase py-3">Browse Shop</a>
+                </h4>
+            </div>
+        </div>
+    </div> -->
+    
+
+    
 {% endblock %}

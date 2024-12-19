@@ -15,15 +15,21 @@
    
     {% block corecss %}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
+      
     {% endblock %}
 
     {% block extra_js %}
     {% endblock %}
 
     {% block corejs %}
+        <script src="https://kit.fontawesome.com/f343fd778a.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
@@ -32,94 +38,196 @@
     <title>Cozy Toes {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top bg-white">
-      <div class="row align-items-center">
-        <div class="col-12 d-flex flex-column justify-content-center" style="height: 170px;">
+    <header class="container-fluid bg-white">
+      <div class="row align-items-center py-3">
+        <div class="col-12 d-flex flex-column justify-content-center header-container">
           <!-- Top Bar with Logo and Social Icons -->
-          <div class="d-flex justify-content-between align-items-center px-3 mb-3">
+          <div>
+            <img src="../static/images/cozy-toes-high-resolution-logo-transparent.png" class="img-fluid logo" alt="CozyToes Logo" />
+          </div>
+
+          <div class="header-top-bar px-3 mb-3">
+            <!-- Left Spacer -->
+             <!-- <div></div> -->
             <!-- Social Icons -->
-            <div class="d-flex">
+            <!-- <div class="d-flex social-icons">
               <div class="mr-3">
-                <i class="fab fa-facebook-f" style="font-size: 15px;"></i>
+                <i class="fab fa-facebook-f social-icon"></i>
               </div>
               <div class="mr-3">
-                <i class="fab fa-twitter" style="font-size: 15px;"></i>
+                <i class="fab fa-twitter social-icon"></i>
               </div>
               <div>
-                <i class="fab fa-instagram" style="font-size: 15px;"></i>
+                <i class="fab fa-instagram social-icon"></i>
               </div>
-            </div>
+            </div> -->
             
             <!-- Logo -->
-            <div>
-              <img src="https://via.placeholder.com/115x115" class="img-fluid" alt="CozyToes Logo" />
-            </div>
+            <!-- <div>
+              <img src="https://via.placeholder.com/115x115" class="img-fluid logo" alt="CozyToes Logo" />
+            </div> -->
             
             <!-- User Icons -->
-            <div class="d-flex">
+            <!-- <div class="d-flex user-icons">
               <div class="mr-3">
-                <i class="fas fa-search" style="font-size: 15px;"></i>
+                <i class="fas fa-search user-icon"></i>
               </div>
               <div class="mr-3">
-                <i class="fas fa-user" style="font-size: 15px;"></i>
+                <i class="fas fa-user user-icon"></i>
               </div>
               <div>
-                <i class="fas fa-shopping-cart" style="font-size: 15px;"></i>
+                <i class="fas fa-shopping-cart user-icon"></i>
               </div>
             </div>
-          </div>
-    
-          <!-- Navigation Bar -->
-          <div class="d-flex justify-content-center align-items-center border-top pt-3">
-            <div class="mx-3">
-              <a href="#" class="text-warning font-weight-bold" style="font-size: 12px;">Home</a>
-            </div>
-            <div class="mx-3 dropdown">
-              <a href="#" class="text-dark font-weight-bold dropdown-toggle" style="font-size: 12px;" id="shopDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Shop
-              </a>
-              <div class="dropdown-menu" aria-labelledby="shopDropdown">
-                <a class="dropdown-item" href="#">Option 1</a>
-                <a class="dropdown-item" href="#">Option 2</a>
-              </div>
-            </div>
-            <div class="mx-3 dropdown">
-              <a href="#" class="text-dark font-weight-bold dropdown-toggle" style="font-size: 12px;" id="productsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Products
-              </a>
-              <div class="dropdown-menu" aria-labelledby="productsDropdown">
-                <a class="dropdown-item" href="#">Option 1</a>
-                <a class="dropdown-item" href="#">Option 2</a>
-              </div>
-            </div>
-            <div class="mx-3">
-              <a href="#" class="text-dark font-weight-bold" style="font-size: 12px;">About Us</a>
-            </div>
-            <div class="mx-3">
-              <a href="#" class="text-dark font-weight-bold" style="font-size: 12px;">Contact Us</a>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="Hero" style="width: 1700px; height: 861px; position: relative">
-          <div class="Bg" style="width: 1700px; height: 861px; left: 0px; top: 0px; position: absolute; background: linear-gradient(180deg, #0074D9 15%, #003D73 69%)"></div>
-          <img class="Photo" style="width: 736.85px; height: 600.69px; left: 763.15px; top: 95.47px; position: absolute" src="https://via.placeholder.com/737x601" />
-          <div class="Button" style="width: 174px; height: 60px; left: 200px; top: 482px; position: absolute">
-            <div class="Bg" style="width: 174px; height: 60px; left: 0px; top: 0px; position: absolute; background: #FF851B"></div>
-            <div class="ExploreNow" style="left: 18.41px; top: 18px; position: absolute; color: white; font-size: 18px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">View All Items</div>
-          </div>
-          <div class="PhasellusRisusTurpisPretiumSitAmetMagnaNonMolestieUltriciesEnimNullamPulvinarFelisAtMetus" style="width: 639px; height: 49px; left: 200px; top: 403px; position: absolute">
-            <div class="PhasellusRisusTurpisPretiumSitAmetMagnaNonMolestieUltriciesEnim" style="left: 0px; top: 0px; position: absolute; color: #504E4A; font-size: 17px; font-family: Montserrat; font-weight: 400; word-wrap: break-word">Phasellus risus turpis, pretium sit amet magna non, molestie ultricies enim. </div>
-            <div class="NullamPulvinarFelisAtMetus" style="left: 0px; top: 28px; position: absolute; color: #504E4A; font-size: 17px; font-family: Montserrat; font-weight: 400; word-wrap: break-word">Nullam pulvinar felis at metus.</div>
-          </div>
-          <div class="FantasticFeaturesThatMakesYouLookCool" style="width: 469px; height: 126px; left: 200px; top: 246px; position: absolute">
-            <div class="QualitySocks" style="left: 0px; top: 0px; position: absolute; color: #FF851B; font-size: 50px; font-family: Montserrat; font-weight: 900; word-wrap: break-word">Quality Socks </div>
-            <div class="ForAllOccasions" style="left: 0px; top: 65px; position: absolute; color: #FF851B; font-size: 50px; font-family: Montserrat; font-weight: 900; word-wrap: break-word">For All Occasions </div>
-          </div>
-        </div> -->
+          </div> -->
+
+          <!-- User Options Section -->
+          <!-- <div class="col-4 text-center my-2 my-lg-0">
+            <ul class="list-inline my-0 user-options">
+              <li class="list-inline-item dropdown">
+                <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <div>
+                    <i class="fas fa-user fa-sm"></i>
+                    <p class="my-0">My Account</p>
+                  </div>
+                </a>
+                <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                  {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                      <a href="" class="dropdown-item">Product Management</a>
+                    {% endif %}
+                    <a href="" class="dropdown-item">My Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                  {% else %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                  {% endif %}
+                </div>
+              </li>
+              <li class="list-inline-item">
+                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                  <div class="text-center">
+                    <div><i class="fas fa-shopping-bag fa-sm"></i></div>
+                    <p class="my-0">
+                      {% if grand_total %}
+                        ${{ grand_total|floatformat:2 }}
+                      {% else %}
+                        $0.00
+                      {% endif %}
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+
         
+          <!-- Navigation Bar -->
+          <div class="border-top pt-3 navigation-bar">  
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <div class="container">
+                <!-- Toggler -->
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav mx-auto">
+                    <!-- Home Link -->
+                    <li class="nav-item">
+                      <a class="nav-link text-warning font-weight-bold" href="#">Home</a>
+                    </li>
+            
+                    <!-- Shop Dropdown -->
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle text-dark font-weight-bold" href="#" id="shopDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Shop
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="shopDropdown">
+                        <a class="dropdown-item" href="#">Option 1</a>
+                        <a class="dropdown-item" href="#">Option 2</a>
+                      </div>
+                    </li>
+            
+                    <!-- Products Dropdown -->
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle text-dark font-weight-bold" href="#" id="productsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Products
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="productsDropdown">
+                        <a class="dropdown-item" href="#">Option 1</a>
+                        <a class="dropdown-item" href="#">Option 2</a>
+                      </div>
+                    </li>
+            
+                    <!-- About Us Link -->
+                    <li class="nav-item">
+                      <a class="nav-link text-dark font-weight-bold" href="#">About Us</a>
+                    </li>
+            
+                    <!-- Contact Us Link -->
+                    <li class="nav-item">
+                      <a class="nav-link text-dark font-weight-bold" href="#">Contact Us</a>
+                    </li>
+                  </ul>
+
+                  <!-- Icons Section -->
+                  <ul class="list-inline my-0 user-options">
+                    <li class="list-inline-item dropdown">
+                      <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div>
+                          <i class="fas fa-user fa-sm"></i>
+                          <p class="my-0">My Account</p>
+                        </div>
+                      </a>
+                      <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        {% if request.user.is_authenticated %}
+                          {% if request.user.is_superuser %}
+                            <a href="" class="dropdown-item">Product Management</a>
+                          {% endif %}
+                          <a href="" class="dropdown-item">My Profile</a>
+                          <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                        {% else %}
+                          <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                          <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                        {% endif %}
+                      </div>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                        <div class="text-center">
+                          <div><i class="fas fa-shopping-bag fa-sm"></i></div>
+                          <p class="my-0">
+                            {% if grand_total %}
+                              ${{ grand_total|floatformat:2 }}
+                            {% else %}
+                              $0.00
+                            {% endif %}
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  
+                </div>
+              </div>
+            </nav>
+          </div> 
+        </div>           
       </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left"></div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
           <form method="GET" action="">
             <div class="input-group w-100">
                 <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
@@ -133,7 +241,7 @@
             </div>
           </form>
         </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <!-- <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
             <li class="list-inline-item dropdown">
               <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -171,38 +279,8 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div> -->
     </header>
-    <div class="container-fluid p-0 position-relative" style="height: 861px; background: linear-gradient(180deg, #0074D9 15%, #003D73 69%);">
-      <!-- Image Section -->
-      <div class="row h-100">
-        <div class="col-lg-6 d-flex align-items-center">
-          <!-- Left Section -->
-          <div class="ml-5">
-            <!-- Main Heading -->
-            <div class="text-warning font-weight-bold" style="font-size: 50px; line-height: 1;">
-              Quality Socks <br> For All Occasions
-            </div>
-    
-            <!-- Subtitle -->
-            <p class="mt-4 text-secondary" style="font-size: 17px; max-width: 639px;">
-              Phasellus risus turpis, pretium sit amet magna non, molestie ultricies enim. <br>
-              Nullam pulvinar felis at metus.
-            </p>
-    
-            <!-- Button -->
-            <a href="#" class="btn btn-warning text-white font-weight-bold px-4 py-3 mt-3" style="font-size: 18px;">
-              View All Items
-            </a>
-          </div>
-        </div>
-    
-        <!-- Right Section -->
-        <div class="col-lg-6 d-flex justify-content-center align-items-center">
-          <img src="https://via.placeholder.com/737x601" class="img-fluid" alt="Photo" style="max-height: 600px;">
-        </div>
-      </div>
-    </div>
     
 
     {% if messages %}

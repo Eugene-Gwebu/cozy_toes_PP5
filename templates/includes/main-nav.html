@@ -1,0 +1,99 @@
+<div class="container">
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <!-- Home Link -->
+        <li class="nav-item">
+          <a class="nav-link text-dark font-weight-bold" href="#">Home</a>
+        </li>
+
+        <!-- Shop Dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle text-dark font-weight-bold" href="#" id="shopDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            All Products
+          </a>
+          <div class="dropdown-menu" aria-labelledby="all-products-link">
+            <a class="dropdown-item" href="#">By Price</a>
+            <a class="dropdown-item" href="#">By Rating</a>
+            <a class="dropdown-item" href="#">By Category</a>
+            <a class="dropdown-item" href="#">All Products</a>
+          </div>
+        </li>
+
+        <!-- Products Dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle text-dark font-weight-bold" href="#" id="productsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products
+          </a>
+          <div class="dropdown-menu" aria-labelledby="productsDropdown">
+            <a class="dropdown-item" href="#">Option 1</a>
+            <a class="dropdown-item" href="#">Option 2</a>
+          </div>
+        </li>
+
+        <!-- About Us Link -->
+        <li class="nav-item">
+          <a class="nav-link text-dark font-weight-bold" href="#">About Us</a>
+        </li>
+
+        <!-- Contact Us Link -->
+        <li class="nav-item">
+          <a class="nav-link text-dark font-weight-bold" href="#">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- Icons Section -->
+      <ul class="list-inline my-0 user-options">
+        <li class="list-inline-item dropdown">
+          <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div>
+              <i class="fas fa-user fa-sm"></i>
+              <p class="my-0">My Account</p>
+            </div>
+          </a>
+          <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            {% if request.user.is_authenticated %}
+              {% if request.user.is_superuser %}
+                <a href="" class="dropdown-item">Product Management</a>
+              {% endif %}
+              <a href="" class="dropdown-item">My Profile</a>
+              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            {% else %}
+              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            {% endif %}
+          </div>
+        </li>
+        <li class="list-inline-item">
+          <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+            <div class="text-center">
+              <div><i class="fas fa-shopping-bag fa-sm"></i></div>
+              <p class="my-0">
+                {% if grand_total %}
+                  ${{ grand_total|floatformat:2 }}
+                {% else %}
+                  $0.00
+                {% endif %}
+              </p>
+            </div>
+          </a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>

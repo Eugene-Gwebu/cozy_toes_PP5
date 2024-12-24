@@ -78,17 +78,24 @@ html, body {
 
 /* Search Form */
 
-.input-group .form-control {
-  border-color: #000;
-}
+/* .input-group .form-control {
+  border-color: #0074D9;
+} */
 
 .input-group-append .btn {
-  background-color: #000;
-  color: #fff;
+  background-color: #0074D9;
+  color: #FF851B;
 }
 
   
   /* Hero Section */
+
+  .hero-heading {
+    color: #FF851B;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+  }
 
   .hero-height {
     height: 100vh;
@@ -115,6 +122,7 @@ html, body {
   }
   
   .hero-button {
+    background-color: #FF851B;
     font-size: 1rem;
     padding: 1rem 1.5rem;
   }

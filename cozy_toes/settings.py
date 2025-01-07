@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-eugenegwebu-cozytoespp5-iphxwacfy8a.ws-eu117.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-eugenegwebu-cozytoespp5-iphxwacfy8a.ws-eu116.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-eugenegwebu-cozytoespp5-iphxwacfy8a.ws-eu117.gitpod.io']
 
 
 # Application definition
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'home',
+    'products',
 ]
 
 MIDDLEWARE = [

@@ -17,7 +17,7 @@
       <ul class="navbar-nav mx-auto">
         <!-- Home Link -->
         <li class="nav-item">
-          <a class="nav-link text-dark font-weight-bold" href="#">Home</a>
+          <a class="nav-link text-dark font-weight-bold" href="{% url 'home' %}">Home</a>
         </li>
 
         <!-- Products Dropdown -->
@@ -27,10 +27,10 @@
             Products
           </a>
           <div class="dropdown-menu" aria-labelledby="all-products-link">
+            <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
             <a class="dropdown-item" href="#">By Price</a>
             <a class="dropdown-item" href="#">By Rating</a>
             <a class="dropdown-item" href="#">By Category</a>
-            <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
           </div>
         </li>
 
@@ -38,6 +38,17 @@
         <li class="nav-item">
           <a class="nav-link text-dark font-weight-bold" href="#">About Us</a>
         </li>
+
+        <!-- Categories Link -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark font-weight-bold" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categories
+          </a>
+          <div class="dropdown-menu border-0" aria-labelledby="socks-link">
+              <a href="{% url 'products' %}?category=Sports Socks" class="dropdown-item">Sports Socks</a>
+              <a href="{% url 'products' %}?category=Fun Socks" class="dropdown-item">Fun Socks</a>
+          </div>
+      </li>
 
         <!-- Contact Us Link -->
         <li class="nav-item">

@@ -28,9 +28,9 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="all-products-link">
             <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
-            <a class="dropdown-item" href="#">By Price</a>
-            <a class="dropdown-item" href="#">By Rating</a>
-            <a class="dropdown-item" href="#">By Category</a>
+            <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price</a>
+            <a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a>
+            <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">By Category</a>
           </div>
         </li>
 
